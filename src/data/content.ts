@@ -204,7 +204,7 @@ export const FOOTER_COLUMNS = [
   {
     title: 'Play Portal',
     links: [
-      { label: 'Game Login →', href: 'https://ramnaam.astroite.com/login', accent: true },
+      { label: 'Game Login →', href: 'https://astroite-gaming-60066817624.catalystserverless.in', accent: true },
       { label: 'llms.txt Index', href: '/llms.txt' },
       { label: 'XML Sitemap', href: '/sitemap.xml' },
     ],
