@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import hanumanFly from '@/assets/hanuman-fly.png';
 import { motion } from 'motion/react';
 import { CTAButton } from '@/components/CTAButton';
 import { Counter } from '@/components/Counter';
@@ -26,7 +27,7 @@ export function Hero() {
       {/* warm vignette toward the page below */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-b from-transparent to-background" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 sm:gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         {/* copy */}
         <div>
           <motion.span
@@ -42,7 +43,7 @@ export function Hero() {
             Namaste &amp; Sita Ram
           </motion.span>
 
-          <h1 className="mt-6 text-balance font-display text-[clamp(2.7rem,6vw,5.2rem)] font-extrabold leading-[1.04] tracking-tight">
+          <h1 className="mt-6 text-balance font-display text-[clamp(2.3rem,6vw,5.2rem)] font-extrabold leading-[1.05] tracking-tight">
             {HEAD_WORDS.map(({ w, accent }, i) => (
               <motion.span
                 key={i}
@@ -132,7 +133,7 @@ function HeroVisual({ reduced }: { reduced: boolean }) {
         <div className="relative aspect-[4/3] overflow-hidden rounded-[18px]">
           <div className="absolute inset-0 bg-gradient-to-b from-[#3a1404] via-[#7a2310] to-[#c7442e]" />
           <Image
-            src="/img/hanuman-fly.png"
+            src={hanumanFly}
             alt="Hanuman Ji flying through a devotional sky"
             fill
             sizes="(max-width: 768px) 90vw, 28rem"

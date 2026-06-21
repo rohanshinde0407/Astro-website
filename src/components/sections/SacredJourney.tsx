@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import shaktipith from '@/assets/shaktipith.png';
 import { Reveal, RevealItem } from '@/components/Reveal';
 import { CTAButton } from '@/components/CTAButton';
 import { OmDivider } from '@/components/OmDivider';
@@ -10,7 +11,7 @@ import { GAME_LOGIN_URL } from '@/lib/utils';
 
 export function SacredJourney() {
   return (
-    <section id="journey" className="relative px-5 py-24 lg:px-8 lg:py-32">
+    <section id="journey" className="relative px-5 py-16 sm:py-24 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-3xl text-center">
         <OmDivider className="mb-6" />
         <Reveal stagger>
@@ -37,22 +38,19 @@ export function SacredJourney() {
       </div>
 
       {/* hero map showcase */}
-      <Reveal
-        variants={scaleIn}
-        className="relative mx-auto mt-14 max-w-5xl"
-      >
+      <Reveal variants={scaleIn} className="relative mx-auto mt-14 max-w-5xl">
         <div className="aura absolute inset-x-10 top-10 -z-10 h-72 rounded-full" />
         <p className="mb-4 text-center font-hindi text-gold">
-          🕉️ श्री राम कार्य सिद्धि — The Sacred Map of 108 Shaktipeethas &amp; 12 Jyotirlingas
+          <span className="mr-1">ॐ</span> श्री राम कार्य सिद्धि — The Sacred Map of
+          108 Shaktipeethas &amp; 12 Jyotirlingas
         </p>
         <div className="overflow-hidden rounded-[26px] border border-gold/25 shadow-warm">
           <Image
-            src="/img/shaktipith.png"
+            src={shaktipith}
             alt="The Ram Naam sacred map — Hanuman Ji flying across the 108 Shaktipeethas and 12 Jyotirlingas"
-            width={1200}
-            height={720}
             className="h-auto w-full object-cover"
-            unoptimized
+            placeholder="blur"
+            sizes="(max-width: 1024px) 100vw, 64rem"
           />
         </div>
       </Reveal>
@@ -65,8 +63,8 @@ export function SacredJourney() {
             variants={fadeUp}
             className="rounded-[22px] glass p-7 transition-transform duration-300 hover:-translate-y-1.5"
           >
-            <div className="grid size-14 place-items-center rounded-2xl bg-foreground/[0.05] text-3xl">
-              {p.icon}
+            <div className="grid size-14 place-items-center rounded-2xl bg-foreground/[0.05]">
+              <p.icon className="size-7 text-saffron" />
             </div>
             <h3 className="mt-5 font-display text-xl font-bold">{p.title}</h3>
             <p className="mt-2 leading-relaxed text-muted-foreground">{p.body}</p>

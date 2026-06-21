@@ -19,7 +19,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="relative border-t border-gold/12 bg-[#1a100b] px-5 py-24 lg:px-8 lg:py-32"
+      className="relative border-t border-gold/12 bg-[#1a100b] px-5 py-16 sm:py-24 lg:px-8 lg:py-32"
     >
       <SchemaMarkup schema={faqSchema} />
 

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import logoHanuman from '@/assets/logo-hanuman.webp';
 import { cn } from '@/lib/utils';
 
 /**
@@ -28,7 +29,7 @@ export function Logo({
         aria-hidden="true"
       >
         <Image
-          src="/img/logo-hanuman.webp"
+          src={logoHanuman}
           alt=""
           width={size}
           height={size}

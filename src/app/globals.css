@@ -81,9 +81,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    /* never below 18px equivalent body text for elderly readability */
-    font-size: 1.0625rem;
-    line-height: 1.65;
+    /* never below 18px body text for elderly readability */
+    font-size: 1.125rem;
+    line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);

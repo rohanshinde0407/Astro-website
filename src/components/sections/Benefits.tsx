@@ -10,7 +10,7 @@ export function Benefits() {
   return (
     <section
       id="benefits"
-      className="relative border-y border-gold/12 bg-[#1a100b] px-5 py-24 lg:px-8 lg:py-32"
+      className="relative border-y border-gold/12 bg-[#1a100b] px-5 py-16 sm:py-24 lg:px-8 lg:py-32"
     >
       <div className="mx-auto max-w-5xl">
         {/* AEO direct-answer block */}
@@ -56,8 +56,8 @@ export function Benefits() {
               variants={fadeUp}
               className="group rounded-[22px] glass p-7 transition-transform duration-300 hover:-translate-y-1.5"
             >
-              <div className="grid size-14 place-items-center rounded-2xl bg-foreground/[0.05] text-3xl transition-colors group-hover:bg-saffron/15">
-                {b.icon}
+              <div className="grid size-14 place-items-center rounded-2xl bg-foreground/[0.05] transition-colors group-hover:bg-saffron/15">
+                <b.icon className="size-7 text-saffron" />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold">{b.title}</h3>
               <p className="mt-2 leading-relaxed text-muted-foreground">{b.body}</p>

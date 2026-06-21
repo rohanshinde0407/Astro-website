@@ -10,7 +10,7 @@ export function FinalCTA() {
   const reduced = usePrefersReducedMotion();
 
   return (
-    <section className="relative px-5 py-24 lg:px-8">
+    <section className="relative px-5 py-16 sm:py-24 lg:px-8">
       <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[32px] warm-gradient px-6 py-20 text-center shadow-warm sm:px-10">
         <GradientMesh oms className="opacity-50 mix-blend-soft-light" />
 

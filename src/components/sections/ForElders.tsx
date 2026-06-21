@@ -7,7 +7,7 @@ import { ELDER_FEATURES } from '@/data/content';
 
 export function ForElders() {
   return (
-    <section id="elders" className="relative px-5 py-24 lg:px-8 lg:py-32">
+    <section id="elders" className="relative px-5 py-16 sm:py-24 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-3xl text-center">
         <OmDivider className="mb-6" />
         <Reveal stagger>
@@ -38,8 +38,8 @@ export function ForElders() {
             variants={fadeUp}
             className="flex gap-4 rounded-[20px] glass p-6"
           >
-            <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-foreground/[0.05] text-2xl">
-              {f.icon}
+            <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-foreground/[0.05]">
+              <f.icon className="size-6 text-saffron" />
             </span>
             <div>
               <h3 className="font-display text-lg font-bold">{f.title}</h3>
