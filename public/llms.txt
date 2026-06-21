@@ -1,0 +1,16 @@
+# RamNaam Chanting Game (by Astroite Gaming)
+
+Welcome to a sacred space where devotion meets the modern age. The RamNaam Chanting Game is a beautiful, immersive digital experience dedicated to the chanting of RamNaam, bridging ancient roots with modern vibes.
+
+## URL & Route Map
+- **Home**: `https://ramnaam.astroite.com/` - Landing page explaining the game, direct answers on devotional mechanics, and key features.
+- **About**: `https://ramnaam.astroite.com/about` - Astroite Gaming's core vision, how we preserve traditional Beeds Mala practices, and details on educational landmarks.
+- **FAQ**: `https://ramnaam.astroite.com/faq` - Structured Q&As outlining the benefits of chanting (mental clarity, decision-making, inner peace) and landmark unlocks.
+
+## Project Vision & Themes
+- **Ancient Roots with Modern Vibes**: Transforming a traditional devotional practice into an interactive, educational digital solution accessible to all generations.
+- **Sacred Indian Geography**: Progression in the game unlocks historical information about India's **108 Shaktipeethas** and **12 Jyotirlingas**, merging spiritual growth with cultural education.
+- **Mind & Daily Routine Benefits**:
+  - *Deeper Clarity:* Chanting brings focus to a noisy mind.
+  - *Better Decision-Making:* A calm mind leads to sharper insights.
+  - *Inner Peace:* Accessible grounding peace, right from your modern device.
