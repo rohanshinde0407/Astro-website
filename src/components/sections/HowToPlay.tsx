@@ -19,7 +19,7 @@ export function HowToPlay() {
   const scaleY = useTransform(scrollYProgress, [0, 1], reduced ? [1, 1] : [0, 1]);
 
   return (
-    <section id="how" className="relative bg-[#1a100b] px-5 py-24 lg:px-8 lg:py-32">
+    <section id="how" className="relative bg-[#1a100b] px-5 py-16 sm:py-24 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-3xl text-center">
         <OmDivider className="mb-6" />
         <Reveal stagger>
@@ -62,8 +62,8 @@ export function HowToPlay() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative flex gap-5"
             >
-              <span className="z-10 grid size-16 shrink-0 place-items-center rounded-2xl warm-gradient text-2xl shadow-warm">
-                {s.icon}
+              <span className="z-10 grid size-16 shrink-0 place-items-center rounded-2xl warm-gradient shadow-warm">
+                <s.icon className="size-7 text-[#2a1306]" />
               </span>
               <div className="flex-1 rounded-[22px] glass p-5">
                 <div className="flex flex-wrap items-baseline gap-x-3">

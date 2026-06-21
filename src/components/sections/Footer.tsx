@@ -77,7 +77,7 @@ export function Footer() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="fixed bottom-6 right-6 z-40 grid size-12 place-items-center rounded-full warm-gradient text-[#2a1306] shadow-warm"
+            className="fixed bottom-6 right-6 z-40 hidden size-12 place-items-center rounded-full warm-gradient text-[#2a1306] shadow-warm lg:grid"
             aria-label="Back to top"
           >
             <ArrowUp className="size-5" />

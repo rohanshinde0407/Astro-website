@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import coverArt from '@/assets/cover.png';
 import { Reveal } from '@/components/Reveal';
 import { CTAButton } from '@/components/CTAButton';
 import { fadeLeft, fadeRight } from '@/lib/motion';
@@ -8,13 +9,13 @@ import { GAME_LOGIN_URL } from '@/lib/utils';
 
 export function GameCover() {
   return (
-    <section className="relative border-y border-gold/12 bg-[#1a100b] px-5 py-24 lg:px-8 lg:py-32">
+    <section className="relative border-y border-gold/12 bg-[#1a100b] px-5 py-16 sm:py-24 lg:px-8 lg:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
         <Reveal variants={fadeLeft} className="relative mx-auto w-full max-w-lg">
           <div className="aura absolute left-1/2 top-1/2 -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full" />
           <div className="overflow-hidden rounded-[26px] border border-gold/30 shadow-warm transition-transform duration-500 hover:scale-[1.02]">
             <Image
-              src="/img/cover.png"
+              src={coverArt}
               alt="Official Ram Naam game cover art — Hanuman Ji at sunrise"
               width={560}
               height={360}

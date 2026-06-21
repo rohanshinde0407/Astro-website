@@ -2,7 +2,31 @@
  * Single source of truth for all RAM NAAM landing-page copy.
  * English-primary with Hindi / Sanskrit devotional accents, per the
  * brand voice: reverent, warm, never pressuring. Built for elders & children.
+ * Icons are modern lucide-react glyphs (no stale emoji).
  */
+import type { LucideIcon } from 'lucide-react';
+import {
+  Hand,
+  Feather,
+  Landmark,
+  MapPin,
+  BookOpen,
+  Sparkles,
+  Medal,
+  Award,
+  Star,
+  Zap,
+  Crown,
+  Brain,
+  Target,
+  Flower2,
+  Type,
+  Heart,
+  Infinity as InfinityIcon,
+  ShieldCheck,
+  Leaf,
+  Gift,
+} from 'lucide-react';
 
 export const NAV_LINKS = [
   { label: 'Vision', hi: 'दृष्टि', href: '#vision' },
@@ -31,90 +55,94 @@ export const SACRED_NAMES = [
   'Grishneshwar',
 ];
 
-export const TRUST_STATS = [
-  { value: 108, suffix: '', label: 'Shaktipeethas', hi: 'शक्तिपीठ' },
-  { value: 12, suffix: '', label: 'Jyotirlingas', hi: 'ज्योतिर्लिंग' },
-  { value: 0, prefix: '₹', suffix: '', label: 'Forever Free', hi: 'सदा निःशुल्क', isFree: true },
-  { value: 100, suffix: '%', label: 'Made for Families', hi: 'परिवार के लिए' },
-];
+type IconItem = { icon: LucideIcon };
 
-export const HOW_STEPS = [
+export const HOW_STEPS: (IconItem & {
+  n: number;
+  title: string;
+  hi: string;
+  body: string;
+})[] = [
   {
     n: 1,
-    icon: '🔘',
+    icon: Hand,
     title: 'Tap the RAM Button',
     hi: 'राम बटन दबाएँ',
     body: 'Each gentle tap chants one Ram Naam — just like moving a single bead on your mala. Your count never resets; it grows forever.',
   },
   {
     n: 2,
-    icon: '🕉️',
+    icon: Feather,
     title: 'Hanuman Ji Takes Flight',
     hi: 'हनुमान जी उड़ान भरें',
     body: 'Your devotion lifts Hanuman Ji higher through a calm, beautiful sky. No timers, no pressure — only the rhythm of the holy name.',
   },
   {
     n: 3,
-    icon: '🛕',
+    icon: Landmark,
     title: 'Awaken Sacred Sites',
     hi: 'पवित्र स्थल जगाएँ',
     body: 'As your chants accumulate, you unlock detailed information about all 108 Shaktipeethas & 12 Jyotirlingas, one sacred landmark at a time.',
   },
 ];
 
-export const SACRED_POINTS = [
+export const SACRED_POINTS: (IconItem & { title: string; body: string })[] = [
   {
-    icon: '🚩',
+    icon: MapPin,
     title: '108 Shaktipeethas & 12 Jyotirlingas',
     body: 'Every chant you complete helps unlock deep, detailed information about these iconic spiritual landmarks of India.',
   },
   {
-    icon: '📖',
+    icon: BookOpen,
     title: 'Enhance Your Knowledge',
     body: 'Learn the history, significance, and proper information of all 108 Shaktipeethas and 12 Jyotirlingas as you advance on your journey.',
   },
   {
-    icon: '✨',
+    icon: Sparkles,
     title: 'Elevate Your Journey',
     body: 'Seamlessly combine your spiritual growth with cultural education — bringing ancient wisdom into modern, everyday devotion.',
   },
 ];
 
-export const BADGES = [
-  { count: 108, icon: '🙏', name: '108 Ram Badge', toast: '108 राम जप पूरे! पवित्र माला पूर्ण!' },
-  { count: 1008, icon: '🔱', name: 'Hanuman Bhakt', toast: '1008 राम जप! हनुमान भक्त!' },
-  { count: 5000, icon: '🌟', name: 'Ram Sevak', toast: '5000 राम जप! राम सेवक!' },
-  { count: 11000, icon: '⚡', name: 'Sankat Mochan', toast: '11000 राम जप! संकट मोचन!' },
-  { count: 21000, icon: '🎊', name: 'Ram Leela', toast: '21000 राम जप! राम लीला!' },
-  { count: 51000, icon: '🛕', name: 'Shakti Yatri', toast: '51000 राम जप! सभी शक्ति पीठ धन्य!' },
-  { count: 108000, icon: '✨', name: 'Maha Bhakt', toast: 'एक लाख से अधिक! महा भक्त!' },
+export const BADGES: (IconItem & {
+  count: number;
+  name: string;
+  toast: string;
+})[] = [
+  { count: 108, icon: Medal, name: '108 Ram Badge', toast: '108 राम जप पूरे! पवित्र माला पूर्ण!' },
+  { count: 1008, icon: Award, name: 'Hanuman Bhakt', toast: '1008 राम जप! हनुमान भक्त!' },
+  { count: 5000, icon: Star, name: 'Ram Sevak', toast: '5000 राम जप! राम सेवक!' },
+  { count: 11000, icon: Zap, name: 'Sankat Mochan', toast: '11000 राम जप! संकट मोचन!' },
+  { count: 21000, icon: Sparkles, name: 'Ram Leela', toast: '21000 राम जप! राम लीला!' },
+  { count: 51000, icon: Landmark, name: 'Shakti Yatri', toast: '51000 राम जप! सभी शक्ति पीठ धन्य!' },
+  { count: 108000, icon: Crown, name: 'Maha Bhakt', toast: 'एक लाख से अधिक! महा भक्त!' },
 ];
 
-export const BENEFITS = [
+export const BENEFITS: (IconItem & { title: string; body: string })[] = [
   {
-    icon: '🧠',
+    icon: Brain,
     title: 'Deeper Clarity',
     body: 'Chanting brings a sense of stillness and focus to a noisy mind, gently easing distraction and restlessness.',
   },
   {
-    icon: '🎯',
+    icon: Target,
     title: 'Better Decision-Making',
     body: 'A calm mind leads to sharper insights, helping you navigate the choices and challenges of day-to-day life.',
   },
   {
-    icon: '🕊️',
+    icon: Flower2,
     title: 'Inner Peace',
     body: 'Experience the same grounding peace our ancestors felt with their mala — right from your modern device.',
   },
 ];
 
-export const ELDER_FEATURES = [
-  { icon: '🔠', title: 'Big buttons, big text', body: 'Large tap targets and 18px+ type — easy to see and easy to press.' },
-  { icon: '🌸', title: 'No losing — only devotion', body: 'A gentle "rest" message instead of "game over". Never punishing.' },
-  { icon: '📿', title: 'Your chants never reset', body: 'Every Ram Naam is counted forever, accumulating like beads on a mala.' },
-  { icon: '🤝', title: 'Stays logged in', body: '"Keep me logged in" stays on, so elders never get locked out.' },
-  { icon: '🐢', title: 'Slow, forgiving pace', body: 'Wide gaps, no countdown timers, no pressure mechanics of any kind.' },
-  { icon: '🎁', title: 'Free · No ads · Offline', body: 'Completely free, no advertisements, and playable even without internet.' },
+export const ELDER_FEATURES: (IconItem & { title: string; body: string })[] = [
+  { icon: Type, title: 'Big buttons, big text', body: 'Large tap targets and 18px+ type — easy to see and easy to press.' },
+  { icon: Heart, title: 'No losing — only devotion', body: 'A gentle "rest" message instead of "game over". Never punishing.' },
+  { icon: InfinityIcon, title: 'Your chants never reset', body: 'Every Ram Naam is counted forever, accumulating like beads on a mala.' },
+  { icon: ShieldCheck, title: 'Stays logged in', body: '"Keep me logged in" stays on, so elders never get locked out.' },
+  { icon: Leaf, title: 'Slow, forgiving pace', body: 'Wide gaps, no countdown timers, no pressure mechanics of any kind.' },
+  { icon: Gift, title: 'Free · No ads · Offline', body: 'Completely free, no advertisements, and playable even without internet.' },
 ];
 
 export const FAQS = [

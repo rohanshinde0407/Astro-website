@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import hanumanStand from '@/assets/hanuman-stand.png';
 import { Reveal } from '@/components/Reveal';
 import { CTAButton } from '@/components/CTAButton';
 import { fadeLeft, fadeRight } from '@/lib/motion';
@@ -8,7 +9,7 @@ import { GAME_LOGIN_URL } from '@/lib/utils';
 
 export function Vision() {
   return (
-    <section id="vision" className="relative px-5 py-24 lg:px-8 lg:py-32">
+    <section id="vision" className="relative px-5 py-16 sm:py-24 lg:px-8 lg:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal variants={fadeLeft}>
           <span className="text-sm font-bold uppercase tracking-[0.18em] text-gold">
@@ -40,7 +41,7 @@ export function Vision() {
           <div className="aura absolute left-1/2 top-1/2 -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full" />
           <div className="overflow-hidden rounded-[26px] border border-gold/25 shadow-warm animate-pulse-glow">
             <Image
-              src="/img/hanuman-stand.png"
+              src={hanumanStand}
               alt="Lord Hanuman seated, representing spiritual stability and strength"
               width={440}
               height={560}

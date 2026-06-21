@@ -9,7 +9,7 @@ import { cn, formatIndian } from '@/lib/utils';
 
 export function Milestones() {
   return (
-    <section id="milestones" className="relative px-5 py-24 lg:px-8 lg:py-32">
+    <section id="milestones" className="relative px-5 py-16 sm:py-24 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-3xl text-center">
         <OmDivider className="mb-6" />
         <Reveal stagger>
@@ -35,7 +35,7 @@ export function Milestones() {
 
       <div className="relative mx-auto mt-16 max-w-3xl">
         {/* central mala thread */}
-        <span className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-gold/0 via-gold/40 to-gold/0 sm:block" />
+        <span className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-gold/0 via-gold/40 to-gold/0 md:block" />
 
         <ul className="space-y-6 sm:space-y-10">
           {BADGES.map((b, i) => {
@@ -44,8 +44,8 @@ export function Milestones() {
               <li
                 key={b.count}
                 className={cn(
-                  'relative flex items-center gap-5 sm:w-1/2',
-                  left ? 'sm:mr-auto sm:pr-10' : 'sm:ml-auto sm:flex-row-reverse sm:pl-10',
+                  'relative flex items-center gap-5 md:w-1/2',
+                  left ? 'md:mr-auto md:pr-10' : 'md:ml-auto md:flex-row-reverse md:pl-10',
                 )}
               >
                 {/* medallion */}
@@ -54,9 +54,9 @@ export function Milestones() {
                   whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
                   viewport={{ once: true, amount: 0.8 }}
                   transition={SPRING}
-                  className="grid size-16 shrink-0 place-items-center rounded-full warm-gradient text-3xl shadow-glow"
+                  className="grid size-16 shrink-0 place-items-center rounded-full warm-gradient shadow-glow"
                 >
-                  {b.icon}
+                  <b.icon className="size-7 text-[#2a1306]" />
                 </motion.span>
 
                 {/* card */}
@@ -67,7 +67,7 @@ export function Milestones() {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className={cn(
                     'flex-1 rounded-[20px] glass p-5',
-                    !left && 'sm:text-right',
+                    !left && 'md:text-right',
                   )}
                 >
                   <p className="font-display text-2xl font-black text-gold tabular-nums">

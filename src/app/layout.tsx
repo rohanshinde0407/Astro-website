@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import { Cinzel_Decorative, Tiro_Devanagari_Hindi, Mukta } from 'next/font/google';
 import './globals.css';
+import hanumanLogo from '@/assets/logo-hanuman.webp';
 import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
+import { StickyMobileCTA } from '@/components/sections/StickyMobileCTA';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { getOrganizationSchema, getWebsiteSchema } from '@/utils/schema';
 
@@ -51,9 +53,18 @@ export const metadata: Metadata = {
       'Every tap is one Ram chant. Fly with Hanuman Ji, unlock 108 Shaktipeethas & 12 Jyotirlingas, and find inner peace. Free & made for all generations.',
     url: SITE_URL,
     siteName: 'RamNaam Chanting Game',
+    images: [
+      {
+        url: hanumanLogo.src,
+        width: hanumanLogo.width,
+        height: hanumanLogo.height,
+        alt: 'RamNaam — Hanuman Ji medallion',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    images: [hanumanLogo.src],
     title: 'RamNaam Chanting Game — हनुमान जी की यात्रा',
     description:
       'Every tap is one Ram chant. Fly with Hanuman Ji and unlock India\'s sacred geography. Free & made for all generations.',
@@ -74,7 +85,7 @@ export default function RootLayout({
   const orgSchema = getOrganizationSchema({
     name: 'Astroite Gaming',
     url: SITE_URL,
-    logo: `${SITE_URL}/img/logo-hanuman.webp`,
+    logo: `${SITE_URL}${hanumanLogo.src}`,
     description:
       'Astroite Gaming is a modern, educational gaming studio bridging the gap between ancient roots and modern vibes through interactive devotional games.',
   });
@@ -102,6 +113,7 @@ export default function RootLayout({
         <Navbar />
         <main id="home">{children}</main>
         <Footer />
+        <StickyMobileCTA />
       </body>
     </html>
   );
