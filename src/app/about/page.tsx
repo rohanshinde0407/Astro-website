@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 export default function RedirectAbout() {
   const router = useRouter();
   useEffect(() => {
-    router.replace('/#about');
+    router.replace('/#vision');
   }, [router]);
   return null;
 }
